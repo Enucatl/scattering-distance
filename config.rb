@@ -42,3 +42,7 @@ configure :build do
   # Minify Javascript on build
   # activate :minify_javascript
 end
+
+ignore "**/LICENSE"
+ignore "**/README.md"
+ignore "data/**/*.hdf5"

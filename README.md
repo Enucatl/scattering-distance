@@ -29,7 +29,7 @@ git remote add enucatl-d3.scatter git@github.com:Enucatl/d3.scatter.git
 setup subtrees
 --------------
 ```
-git subtree add --squash --prefix source/javascripts/vendor/d3.errorbar https://github.com/Enucatl/d3.errorbar.git master
+git subtree add --squash --prefix source/javascripts/vendor/d3.base-chart https://github.com/Enucatl/d3.base-chart.git master
 git subtree add --squash --prefix source/javascripts/vendor/d3.axes https://github.com/Enucatl/d3.axes.git master
 git subtree add --squash --prefix source/javascripts/vendor/d3.barchart https://github.com/Enucatl/d3.barchart.git master
 git subtree add --squash --prefix source/javascripts/vendor/d3.colorbar https://github.com/Enucatl/d3.colorbar.git master
