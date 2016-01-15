@@ -1,3 +1,42 @@
 .container
+  %header#top.header
   .row
     %h1 Compton scattering and sample distance
+    .col-m-6.offset-m-3.col-xs-12.svg#summary-plot{data: { exp: data.summary.to_json}}
+  %section#dataset-images
+    .row
+      .col-l-10.offset-l-1.text-center
+        %h2 Single dataset raw images
+        %hr.small/
+        .row
+          .col-m-6.offset-m-3.text-left
+            %p
+              The images are acquired with 19 phase steps, 5 s exposure per
+              step. Each sample is scanned 10 times with one flat scan per
+              line, for a total of 10 flat scans. Total exposure time: 31 m
+              40 s per sample.
+            %p
+              The region of interest where the microspheres are located is
+              then manually selected after the reconstruction. Only this
+              region of interest is shown here and considered for the
+              analysis.
+        .row
+          .col-m-3.text-right
+            select dataset:
+          .col-m-6.text-center
+            - datasets = data.summary.sort {|a, b| a.position <=> b.position}
+            %select#select-dataset
+              - datasets.each do |s|
+                %option{value: s.file}
+                  position
+                  =s.position
+        .row
+          .col-m-4
+            %h3 absorption
+            .portfolio-item#absorption-image
+          .col-m-4
+            %h3 dark field
+            .portfolio-item#darkfield-image
+          .col-m-4
+            %h3 ratio of the logarithms
+            .portfolio-item#ratio-image
