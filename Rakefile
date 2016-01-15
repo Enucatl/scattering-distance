@@ -11,7 +11,7 @@ namespace :reconstruction do
     min_pixel = row[:min_pixel]
     max_pixel = row[:max_pixel]
 
-    file csv => [reconstructed, "source/data/rawdata/hdf2csv.py"] do |f|
+    file csv => [reconstructed, "source/data/rawdata/hdf2csv.py", "source/data/datasets.csv"] do |f|
       sh "python #{f.prerequisites[1]} #{f.prerequisites[0]} --crop #{min_pixel} #{max_pixel}"
     end
   end

@@ -1,5 +1,4 @@
 $ ->
-    console.log "runnning??"
     draw_summary = (placeholder) ->
         data = $(placeholder).data("exp")
         width = $(placeholder).width()
@@ -20,7 +19,10 @@ $ ->
             }
 
         scatter.x_scale()
-            .domain [0, 8]
+            .domain [
+                d3.min data, scatter.x_value()
+                d3.max data, scatter.x_value()
+            ]
         scatter.y_scale()
             .domain [
                 0.8 * d3.min data, scatter.y_value()
