@@ -10,6 +10,6 @@ gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
 
 # Middleman Gems
 gem 'middleman', '>= 4.0.0'
-gem 'middleman-sprockets', '~> 4.0.0.rc'
+gem 'middleman-sprockets', :git => 'https://github.com/middleman/middleman-sprockets.git', :branch => 'master'
 gem 'middleman-livereload'
-gem 'middleman-deploy'
+gem 'middleman-deploy', :git => 'https://github.com/middleman-contrib/middleman-deploy.git', :branch => 'master'

@@ -1,3 +1,22 @@
+GIT
+  remote: https://github.com/middleman-contrib/middleman-deploy.git
+  revision: 243ab38b08896cd5a37d6845a01a5761b934a898
+  branch: master
+  specs:
+    middleman-deploy (2.0.0.pre.alpha)
+      middleman-core (>= 3.2)
+      net-sftp
+      ptools
+
+GIT
+  remote: https://github.com/middleman/middleman-sprockets.git
+  revision: 1177edb30c452211caca0a5751f59c1816320807
+  branch: master
+  specs:
+    middleman-sprockets (4.0.0.rc.1)
+      middleman-core (>= 4.0.0.rc.1)
+      sprockets (~> 3.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -73,17 +92,10 @@ GEM
       sass (>= 3.4)
       tilt (~> 1.4.1)
       uglifier (~> 2.6)
-    middleman-deploy (1.0.0)
-      middleman-core (>= 3.2)
-      net-sftp
-      ptools
     middleman-livereload (3.4.6)
       em-websocket (~> 0.5.1)
       middleman-core (>= 3.3)
       rack-livereload (~> 0.3.15)
-    middleman-sprockets (4.0.0.rc.1)
-      middleman-core (>= 4.0.0.rc.1)
-      sprockets (~> 3.0)
     mime-types (3.0)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2015.1120)
@@ -128,8 +140,8 @@ PLATFORMS
 
 DEPENDENCIES
   middleman (>= 4.0.0)
-  middleman-deploy
+  middleman-deploy!
   middleman-livereload
-  middleman-sprockets (~> 4.0.0.rc)
+  middleman-sprockets!
   tzinfo-data
   wdm (~> 0.1.0)
